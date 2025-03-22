@@ -3,12 +3,9 @@ package de.meowlan.twochat.client;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = "twochat")
 public class TwochatConfig implements ConfigData {
-    @ConfigEntry.Gui.Excluded
-
     int posX = 10;
     int posY = 10;
     int width = 320;
