@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "twochat",
+  "version": "${version}",
+
+  "name": "2chat",
+  "description": "2chat adds a second \"Chat\" which is readonly and whichs position and size can be fully configured. Primarily for adventure map makers.",
+  "authors": [],
+  "contact": {},
+
+  "license": "All-Rights-Reserved",
+  "icon": "assets/twochat/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "client": ["de.meowlan.twochat.client.TwochatClient"],
+    "main": ["de.meowlan.twochat.Twochat"],
+    "modmenu": [
+      "de.meowlan.twochat.client.ModMenuIntegration"
+    ]
+  },
+
+  "mixins": [
+    "twochat.mixins.json"
+    ,{
+      "config": "twochat.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

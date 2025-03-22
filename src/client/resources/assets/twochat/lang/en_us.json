@@ -1,0 +1,12 @@
+{
+  "text.autoconfig.twochat.title": "2chat",
+  "text.autoconfig.twochat.posX": "Position X",
+  "text.autoconfig.twochat.posY": "Position Y",
+  "text.autoconfig.twochat.width": "Width",
+  "text.autoconfig.twochat.height": "Height",
+  "text.autoconfig.twochat.fadeTimeMs": "Fade Time (ms)",
+  "text.autoconfig.twochat.align": "Alignment",
+  "text.autoconfig.twochat.chatFlowDown": "Chat Flow Down",
+  "text.autoconfig.twochat.visible": "Visible",
+  "text.autoconfig.twochat.backgroundOpacity": "Background Opacity"
+}
