@@ -12,6 +12,7 @@ import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.command.CommandRegistryAccess;
+import net.minecraft.text.Texts;
 
 import java.util.Collection;
 
@@ -29,7 +30,9 @@ public class TwochatCommands {
                         .executes(context -> {
                             Collection<ServerPlayerEntity> players = EntityArgumentType.getPlayers(context, "targets");
                             Text message = TextArgumentType.getTextArgument(context, "message");
-                            MessagePacket packet = new MessagePacket(message);
+
+                            ServerPlayerEntity serverPlayerEntity = context.getSource().getPlayer();
+                            MessagePacket packet = new MessagePacket(Texts.parse(context.getSource(), message, serverPlayerEntity, 0));
 
                             for (ServerPlayerEntity player : players) {
                                 ServerPlayNetworking.send(player, packet);
